@@ -1,0 +1,51 @@
+{
+    "manifest_version": 1,
+    "type": "WebApp",
+    "meta": {
+        "name": "SeeYou",
+        "version": "0.1.0",
+        "minimum-overwolf-version": "0.120.0",
+        "author": "swg",
+        "icon": "icon.png",
+        "description": "Affiche les informations de Valorant sur Discord"
+    },
+    "permissions": [
+        "GameInfo",
+        "Clipboard",
+        "Extensions"
+    ],
+    "dependencies": {
+        "OverwolfDiscordRPC": {
+            "version": "0.0.1"
+        }
+    },
+    "data": {
+        "game_targeting": {
+            "type": "dedicated",
+            "game_ids": [
+                21640
+            ]
+        },
+        "launch_events": [
+            {
+                "event": "GameLaunch",
+                "event_data": {
+                    "game_ids": [
+                        21640
+                    ]
+                },
+                "start_minimized": true
+            }
+        ],
+        "game_events": [
+            21640
+        ],
+        "start_window": "background",
+        "windows": {
+            "background": {
+                "file": "background.html",
+                "is_background_page": true
+            }
+        }
+    }
+}
